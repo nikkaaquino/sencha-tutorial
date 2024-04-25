@@ -13,6 +13,14 @@ Ext.application({
         'MyApp.*'
     ],
 
+    launch: function(){
+        viewport=Ext.getCmp('viewport');
+        target=viewport.down('#viewport-target');
+        view=Ext.create('MyApp.view.main.Main');
+        target.add(view)
+    },
+
     // The name of the initial view to create.
-    mainView: 'MyApp.view.main.Main'
+    mainView: 'MyApp.view.main.Main',
+    autoCreateViewport: true
 });
