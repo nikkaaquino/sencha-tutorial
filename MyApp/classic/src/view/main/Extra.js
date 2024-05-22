@@ -1,23 +1,24 @@
 Ext.define("MyApp.view.main.Extra", {
-  extend: "Ext.container.Container",
+  extend: "Ext.grid.Panel",
   xtype: "extra",
-  controller: "extra",
-  items: [
+  title: "Grid Testing",
+  store: [
     {
-      title: "Extra View here",
-      html: "Dom will be here.",
+      name: "Nikka Aquino",
+      email: "nikkaaquino28@gmail.com",
+      phone: "0917176899",
     },
     {
-      xtype: "button",
-      name: "click",
-      text: "Call Controller",
-      itemId: "callController",
-    },
-    {
-      xtype: "button",
-      name: "another",
-      text: "another button",
-      itemId: "another",
+      name: "Matet Manuba",
+      email: "matetmanuba@gmail.com",
+      phone: "0917176899",
     },
   ],
+  columns: [
+    { text: "Name", dataIndex: "name", flex: 1 },
+    { text: "Email", dataIndex: "email", flex: 1 },
+    { text: "Phone", dataIndex: "phone", flex: 1 },
+  ],
+  height: 300,
+  width: 400,
 });
